@@ -1,0 +1,26 @@
+{
+  "ollama_base_url": "http://127.0.0.1:11434",
+  "models": {
+    "vision": "qwen3-vl:8b-instruct",
+    "reasoning": "qwen3.5:9b",
+    "code": "qwen3.5-coder-ctx:latest"
+  },
+  "hf_models": [
+    "facebook/dinov2-base",
+    "IDEA-Research/grounding-dino-base",
+    "facebook/sam2.1-hiera-large"
+  ],
+  "inputs": {
+    "demo_mcap": "../video_depthcam/demo_20260912_172945_0.mcap",
+    "masks": "../out/gsam2_demo/masks_gsam2_merged.json",
+    "depth": "../out/npz/demo_depth.npz",
+    "skills": "../out/json/skills_lowlevel.json"
+  },
+  "source_modules": [
+    "../preprocessing/data_io/mcap_to_mp4.py",
+    "../preprocessing/data_io/depth_from_mcap.py",
+    "../preprocessing/constraint_inference/llm_client.py",
+    "../preprocessing/skill_inference/hoi_skill_inference.py",
+    "../segmentation/gsam2_video.py"
+  ]
+}

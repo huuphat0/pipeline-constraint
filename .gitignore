@@ -1,0 +1,28 @@
+# Dữ liệu: không đưa lên git (tự chuẩn bị, xem README)
+video_depthcam/*
+!video_depthcam/.gitkeep
+out/*
+!out/.gitkeep
+*.mcap
+*.npz
+*.mp4
+*.MP4
+
+# Đầu ra pipeline và cache VLM/LLM
+rekep_keypoint_constraints/artifacts/
+skill_video/output/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Kết quả chạy thử cục bộ (giữ trên máy, không đưa lên git)
+_test_run/
